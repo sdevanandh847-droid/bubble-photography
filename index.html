@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090909">
+<meta name="description" content="BUBBLE PHOTOGRAPHY — Capture. Create. Inspire. Photography, videography and creative stories.">
+<title>BUBBLE PHOTOGRAPHY | Capture • Create • Inspire</title>
+<style>
+:root{--bg:#090909;--panel:#141414;--gold:#d9b36c;--cream:#f4eee3;--muted:#aaa39a;--line:#30291f}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--cream);font-family:Inter,Arial,sans-serif;line-height:1.55}
+a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}button{cursor:pointer}
+header{position:sticky;top:0;z-index:10;background:#090909ed;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+.nav{max-width:1160px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-family:Georgia,serif;letter-spacing:.16em;font-size:21px;color:var(--gold);font-weight:bold}.brand small{display:block;color:#fff;font:10px Arial;letter-spacing:.35em;margin-top:2px}
+nav{display:flex;gap:20px;align-items:center;flex-wrap:wrap}nav a{font-size:13px;color:#ddd}nav a:hover{color:var(--gold)}
+.btn{border:1px solid var(--gold);background:var(--gold);color:#15110a;padding:11px 17px;border-radius:3px;font-weight:700;font-size:13px;display:inline-block}
+.btn.ghost{background:transparent;color:var(--gold)}.btn.small{padding:7px 11px;font-size:12px}
+.wrap{max-width:1160px;margin:auto;padding:0 22px}
+.hero{min-height:590px;display:grid;align-items:center;background:linear-gradient(90deg,#080808 0%,#080808e8 42%,#08080820 100%),url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=2000&q=85') center/cover}
+.hero-inner{max-width:1160px;width:100%;margin:auto;padding:90px 22px}.eyebrow{color:var(--gold);letter-spacing:.28em;font-size:11px;font-weight:bold}
+h1{font:clamp(42px,7vw,82px)/1.04 Georgia,serif;max-width:700px;margin:18px 0;color:#fff}h1 span{color:var(--gold);font-style:italic}
+.lead{color:#d2cbc0;max-width:510px;font-size:16px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+section{padding:76px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:28px}.section-head h2{font:clamp(30px,4vw,44px) Georgia,serif;margin:7px 0}.muted{color:var(--muted);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:var(--panel);border:1px solid #28231c;overflow:hidden}.card img,.card video{width:100%;height:270px;object-fit:cover;display:block;background:#1a1a1a}.card-body{padding:17px}.card h3{font:21px Georgia,serif;margin:0 0 5px}.card p{color:var(--muted);font-size:13px;margin:0 0 14px}.card-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.text-btn{border:0;background:none;color:#e9d5b0;padding:5px 0;font-size:13px}.text-btn:hover{color:var(--gold)}.count{font-size:12px;color:var(--muted)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}.split img{width:100%;height:390px;object-fit:cover}.split h2{font:42px Georgia,serif;margin:10px 0}.gold{color:var(--gold)}
+.banner{background:linear-gradient(120deg,#17130d,#0e0e0e);border:1px solid var(--line);padding:40px;text-align:center}.banner h2{font:38px Georgia,serif;margin:0 0 10px}
+form{display:grid;gap:13px;max-width:620px}input,textarea,select{width:100%;background:#111;border:1px solid #393126;color:#fff;padding:13px;border-radius:3px}textarea{min-height:120px;resize:vertical}label{font-size:12px;color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:35px 0;color:var(--muted);font-size:12px}.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+#adminPanel{display:none;background:#111;border:1px solid var(--gold);padding:22px;margin:24px auto;max-width:850px}#adminPanel.open{display:block}.admin-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.notice{font-size:12px;color:#d8c49f;background:#211b11;padding:12px;border-left:3px solid var(--gold)}
+#toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#e2bd78;color:#17120a;padding:10px 16px;border-radius:3px;display:none;z-index:20;font-size:13px}
+@media(max-width:760px){.nav{align-items:flex-start;flex-direction:column}.nav nav{gap:13px}.hero{min-height:520px}.grid{grid-template-columns:1fr 1fr}.card img{height:210px}.split{grid-template-columns:1fr}.split img{height:280px}.section-head{align-items:start;flex-direction:column}}
+@media(max-width:480px){.grid{grid-template-columns:1fr}.card img{height:250px}.hero-inner{padding-top:65px;padding-bottom:65px}section{padding:55px 0}.banner{padding:26px 17px}}
+</style>
+</head>
+<body>
+<header><div class="nav">
+<a class="brand" href="#home">BUBBLE<small>PHOTOGRAPHY</small></a>
+<nav><a href="#home">Home</a><a href="#gallery">Gallery</a><a href="#films">Films</a><a href="#about">About</a><a href="#contact">Enquiries</a><button class="btn ghost small" id="ownerBtn">Owner studio</button></nav>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="hero-inner">
+<div class="eyebrow">CAPTURE · CREATE · INSPIRE</div>
+<h1>Every frame<br>tells a <span>story.</span></h1>
+<p class="lead">A creative space for photography, videography and visual storytelling. Explore the moments, discover the details, and get in touch to create something memorable.</p>
+<div class="actions"><a class="btn" href="#gallery">Explore the gallery</a><a class="btn ghost" href="#contact">Start an enquiry</a></div>
+</div></section>
+<div class="wrap"><div id="adminPanel">
+<h2 class="gold" style="font:30px Georgia;margin:0 0 8px">Owner studio · Local preview</h2>
+<p class="muted">Add images or videos to preview your portfolio on this browser.</p>
+<div class="notice">This starter version stores uploads only in this browser session/device. It does not provide secure owner authentication or shared online storage. Connect a backend before using this as a public client upload system.</div>
+<div class="admin-grid" style="margin-top:15px">
+<div><label>Content title</label><input id="uploadTitle" placeholder="e.g. Golden hour portraits"></div>
+<div><label>Content type</label><select id="uploadType"><option>Photography</option><option>Videography</option><option>Creative</option></select></div>
+</div>
+<p><label>Select a photo or video</label><input type="file" id="uploadFile" accept="image/*,video/*"></p>
+<button class="btn" id="publishBtn">Add to this preview</button>
+<button class="btn ghost" id="closeAdmin">Close studio</button>
+</div></div>
+<section id="gallery"><div class="wrap">
+<div class="section-head"><div><div class="eyebrow">SELECTED WORK</div><h2>Photography gallery</h2><div class="muted">A few frames from our creative world.</div></div></div>
+<div class="grid" id="photoGrid">
+<article class="card"><img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=900&q=85" alt="Sunrise landscape"><div class="card-body"><h3>Golden moments</h3><p>Photography · Light, mood and memory.</p><div class="card-actions"><button class="text-btn like">♡ Like</button><span class="count">0 likes</span><button class="text-btn share">↗ Share</button></div><div class="comments"></div><input class="comment-input" placeholder="Leave a comment"><button class="text-btn comment-btn">Post comment</button></div></article>
+<article class="card"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=85" alt="Mountain landscape"><div class="card-body"><h3>Beyond the ordinary</h3><p>Photography · Finding beauty in the details.</p><div class="card-actions"><button class="text-btn like">♡ Like</button><span class="count">0 likes</span><button class="text-btn share">↗ Share</button></div><div class="comments"></div><input class="comment-input" placeholder="Leave a comment"><button class="text-btn comment-btn">Post comment</button></div></article>
+<article class="card"><img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=900&q=85" alt="Flowers"><div class="card-body"><h3>Creative perspectives</h3><p>Creative · A different point of view.</p><div class="card-actions"><button class="text-btn like">♡ Like</button><span class="count">0 likes</span><button class="text-btn share">↗ Share</button></div><div class="comments"></div><input class="comment-input" placeholder="Leave a comment"><button class="text-btn comment-btn">Post comment</button></div></article>
+</div></div></section>
+<section id="films" style="background:#101010"><div class="wrap"><div class="split">
+<div><div class="eyebrow">MOTION & EMOTION</div><h2>Stories that move.</h2><p class="muted">A dedicated space for cinematic videos, reels, event highlights and behind-the-scenes creativity. Replace this sample visual with your own video work.</p><a class="btn ghost" href="#contact">Enquire about a project</a></div>
+<img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1100&q=85" alt="Camera and filmmaking setup">
+</div></div></section>
+<section id="about"><div class="wrap"><div class="split">
+<img src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?auto=format&fit=crop&w=1100&q=85" alt="Camera close-up">
+<div><div class="eyebrow">OUR CREATIVE WORLD</div><h2>Creativity has no limits.</h2><p class="muted">BUBBLE PHOTOGRAPHY brings photography, videography and creative expression together. Every frame has a feeling. Every project is a new story.</p><p class="gold">CAPTURE · CREATE · INSPIRE</p></div>
+</div></div></section>
+<section id="contact"><div class="wrap"><div class="section-head"><div><div class="eyebrow">LET'S CONNECT</div><h2>Start a conversation.</h2><div class="muted">Tell us a little about your photography or videography project.</div></div></div>
+<form id="enquiryForm"><input id="clientName" required placeholder="Your name"><input id="clientContact" required placeholder="Email or phone number"><select id="service"><option>Photography enquiry</option><option>Videography enquiry</option><option>Creative project</option><option>Other</option></select><textarea id="message" required placeholder="Tell us about your project..."></textarea><button class="btn" type="submit">Prepare enquiry</button><p class="muted" id="formStatus">This demo prepares an email draft; connect your own email service to receive enquiries online.</p></form>
+</div></section>
+<section><div class="wrap"><div class="banner"><div class="eyebrow">YOUR MOMENT. OUR LENS.</div><h2>Let's make it memorable.</h2><p class="muted">Follow BUBBLE PHOTOGRAPHY for more creative stories.</p><a class="btn" href="https://www.instagram.com/bubb_lephotography/" target="_blank" rel="noopener">Visit Instagram ↗</a></div></div></section>
+</main>
+<footer><div class="wrap footer-row"><div><strong class="gold">BUBBLE PHOTOGRAPHY</strong><br>Capture · Create · Inspire</div><div>Instagram: @bubb_lephotography<br>© <span id="year"></span> BUBBLE PHOTOGRAPHY</div></div></footer>
+<div id="toast"></div>
+<script>
+const $=s=>document.querySelector(s);
+$('#year').textContent=new Date().getFullYear();
+function toast(msg){const t=$('#toast');t.textContent=msg;t.style.display='block';setTimeout(()=>t.style.display='none',2400)}
+$('#ownerBtn').onclick=()=>{$('#adminPanel').classList.toggle('open');$('#adminPanel').scrollIntoView({behavior:'smooth',block:'center'})};
+$('#closeAdmin').onclick=()=>$('#adminPanel').classList.remove('open');
+document.querySelectorAll('.like').forEach(btn=>btn.addEventListener('click',()=>{const liked=btn.dataset.liked==='yes';btn.dataset.liked=liked?'no':'yes';btn.textContent=liked?'♡ Like':'♥ Liked';const c=btn.parentElement.querySelector('.count');c.textContent=(liked?0:1)+' likes'}));
+document.querySelectorAll('.share').forEach(btn=>btn.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(location.href+'#gallery');toast('Gallery link copied')}catch(e){toast('Copy this page address to share')}}));
+document.querySelectorAll('.comment-btn').forEach(btn=>btn.addEventListener('click',()=>{const input=btn.previousElementSibling;const value=input.value.trim();if(!value)return;const line=document.createElement('p');line.className='muted';line.textContent='💬 '+value;btn.parentElement.querySelector('.comments').append(line);input.value=''}));
+$('#publishBtn').onclick=()=>{const file=$('#uploadFile').files[0],title=$('#uploadTitle').value.trim()||'New creative work';if(!file){toast('Choose a photo or video first');return}const url=URL.createObjectURL(file),card=document.createElement('article');card.className='card';const media=file.type.startsWith('video/')?document.createElement('video'):document.createElement('img');media.src=url;if(media.tagName==='VIDEO'){media.controls=true}else media.alt=title;const body=document.createElement('div');body.className='card-body';const h=document.createElement('h3');h.textContent=title;const p=document.createElement('p');p.textContent=$('#uploadType').value+' · Added in local preview';body.append(h,p);card.append(media,body);$('#photoGrid').prepend(card);$('#uploadTitle').value='';$('#uploadFile').value='';toast('Added to this browser preview')};
+$('#enquiryForm').addEventListener('submit',e=>{e.preventDefault();const subject=encodeURIComponent('BUBBLE PHOTOGRAPHY enquiry — '+$('#service').value);const body=encodeURIComponent('Name: '+$('#clientName').value+'\nContact: '+$('#clientContact').value+'\nService: '+$('#service').value+'\n\n'+$('#message').value);$('#formStatus').textContent='Your email app should open with the enquiry prepared. Add the studio email address before launch.';location.href='mailto:?subject='+subject+'&body='+body});
+</script>
+</body></html>
