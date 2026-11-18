@@ -30,13 +30,16 @@ footer{border-top:1px solid var(--line);padding:35px 0;color:var(--muted);font-s
 #toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#e2bd78;color:#17120a;padding:10px 16px;border-radius:3px;display:none;z-index:20;font-size:13px}
 @media(max-width:760px){.nav{align-items:flex-start;flex-direction:column}.nav nav{gap:13px}.hero{min-height:520px}.grid{grid-template-columns:1fr 1fr}.card img{height:210px}.split{grid-template-columns:1fr}.split img{height:280px}.section-head{align-items:start;flex-direction:column}}
 @media(max-width:480px){.grid{grid-template-columns:1fr}.card img{height:250px}.hero-inner{padding-top:65px;padding-bottom:65px}section{padding:55px 0}.banner{padding:26px 17px}}
-/* BUBBLE gallery photo size */
-.card img {
-  height: 320px !important;
+/* BUBBLE PHOTOGRAPHY - Wide image frames */
+.card img,
+.card video {
   width: 100%;
+  height: auto !important;
+  aspect-ratio: 2.3 / 1;
   object-fit: cover;
-  aspect-ratio: auto;
+  display: block;
 }
+
 </style>
 </head>
 <body>
